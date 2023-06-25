@@ -28,6 +28,7 @@ export default {
         greenPrimary: "#D6ECDF",
         red: "#DA002B",
         black: "#242424",
+        textColor: '#2b2f38'
       },
     },
   },
