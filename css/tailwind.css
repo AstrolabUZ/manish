@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.wrapper {
+  @apply xl:container xl:mx-auto;
+}/*# sourceMappingURL=tailwind.css.map */

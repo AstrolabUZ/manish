@@ -1,4 +1,4 @@
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,28 +18,33 @@ const Partners = () => {
       </h6>
       <div>
         <Swiper
-          modules={[Navigation]}
-          spaceBetween={50}
+          modules={[Navigation, Autoplay]}
+          autoplay={{
+            delay: 1000,
+          }}
+          spaceBetween={70}
           slidesPerView={4}
           navigation
-          className={"wrapper px-10 h-[200px] mt-5 overflow-hidden"}
+          // centeredSlides={true}
+          className={"wrapper h-[200px] mt-5 flex"}
+          loop={true}
         >
-          <SwiperSlide className="grid place-items-center p-5">
+          <SwiperSlide className="grid place-items-center p-5 select-none">
             <img src={img1} alt="" />
           </SwiperSlide>
-          <SwiperSlide className="grid place-items-center p-5">
+          <SwiperSlide className="grid place-items-center p-5 select-none">
             <img src={img2} alt="" />
           </SwiperSlide>
-          <SwiperSlide className="grid place-items-center p-5">
+          <SwiperSlide className="grid place-items-center p-5 select-none">
             <img src={img3} alt="" />
           </SwiperSlide>
-          <SwiperSlide className="grid place-items-center p-5">
+          <SwiperSlide className="grid place-items-center p-5 select-none">
             <img src={img4} alt="" />
           </SwiperSlide>
-          <SwiperSlide className="grid place-items-center p-5">
+          <SwiperSlide className="grid place-items-center p-5 select-none">
             <img src={img5} alt="" />
           </SwiperSlide>
-          <SwiperSlide className="grid place-items-center p-5">
+          <SwiperSlide className="grid place-items-center p-5 select-none">
             <img src={img6} alt="" />
           </SwiperSlide>
         </Swiper>
