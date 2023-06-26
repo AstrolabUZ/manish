@@ -3,6 +3,8 @@ import img1 from "../../../assets/image/card-img1.jpg";
 import img2 from "../../../assets/image/card-img2.png";
 import img3 from "../../../assets/image/card-img3.png";
 
+import { GiSevenPointedStar } from "react-icons/gi";
+import { FaChild, FaPercent } from "react-icons/fa";
 const Courses = () => {
   const data = [
     {
@@ -41,11 +43,21 @@ const Courses = () => {
           ))}
         </div>
       </section>
-      <section className="wrapper flex">
-        <div>
-          <img src="" alt="" />
-          <h6>Сертификат</h6>
-          <p>По окончании курса выдаётся сертификат</p>
+      <section className="wrapper grid grid-cols-[auto_1fr_1fr] mt-10">
+        <div className="px-10">
+          <GiSevenPointedStar color="#fc5f5f" size={40}/>
+          <h6 className="text-lg text-textColor font-semibold pt-5 pb-2">Сертификат</h6>
+          <p className="text-pColor text-[15px]">По окончании курса выдаётся сертификат</p>
+        </div>
+        <div className="px-20 ">
+          <FaChild color="#fc5f5f" size={40}/>
+          <h6 className="text-lg text-textColor font-semibold pt-5 pb-2">Для детей</h6>
+          <p className="text-pColor text-[15px]">Есть курсы для детей</p>
+        </div>
+        <div className="px-20">
+          <FaPercent color="#fc5f5f" size={40}/>
+          <h6 className="text-lg text-textColor font-semibold pt-5 pb-2">Много скидок</h6>
+          <p className="text-pColor text-[15px]">Различные скидки на курсы</p>
         </div>
       </section>
     </>

@@ -8,3 +8,11 @@
 body {
     font-family: "Montserrat", sans-serif;
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #242424 !important;
+    padding: 20px;
+}
