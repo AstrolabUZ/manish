@@ -7,6 +7,8 @@ import {
   FaTelegram,
 } from "react-icons/fa6";
 import { FaEnvelopeSquare } from "react-icons/fa";
+import { Select, initTE } from "tw-elements";
+initTE({ Select });
 
 const Contacts = () => {
   return (
@@ -56,7 +58,7 @@ const Contacts = () => {
           </div>
           <iframe
             className="w-full h-60"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11987.643084432932!2d69.2494792!3d41.3108047!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b05774c5969%3A0xd6f6eef4c05c280!2sTashkent%20State%20University%20of%20Economics!5e0!3m2!1sen!2s!4v1682147089439!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.9035295931903!2d69.28117427616183!3d41.332711071306925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b4c69192dc9%3A0x4fbbb934de675575!2sUzOman%20Tower!5e0!3m2!1sen!2sus!4v1687783859366!5m2!1sen!2sus"
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -72,25 +74,41 @@ const Contacts = () => {
               className="rounded p-4 bg-iconBg hover:bg-iconHoverBg ease-in-out duration-300"
               href="#"
             >
-              <FaFacebook />
+              <FaFacebook
+                style={{
+                  color: "#545353",
+                }}
+              />
             </a>
             <a
               className="rounded p-4 bg-iconBg hover:bg-iconHoverBg ease-in-out duration-300"
               href="#"
             >
-              <FaInstagram />
+              <FaInstagram
+                style={{
+                  color: "#545353",
+                }}
+              />
             </a>
             <a
               className="rounded p-4 bg-iconBg hover:bg-iconHoverBg ease-in-out duration-300"
               href="#"
             >
-              <FaYoutube />
+              <FaYoutube
+                style={{
+                  color: "#545353",
+                }}
+              />
             </a>
             <a
               className="rounded p-4 bg-iconBg hover:bg-iconHoverBg ease-in-out duration-300"
               href="#"
             >
-              <FaTelegram />
+              <FaTelegram
+                style={{
+                  color: "#545353",
+                }}
+              />
             </a>
           </div>
         </div>
@@ -101,25 +119,30 @@ const Contacts = () => {
           <p className="text-center text-sm pt-3 pb-8">
             Мы свяжемся с вами в ближайшее время.
           </p>
+          <select
+            data-te-select-init
+            className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black cursor-pointer"
+          >
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+            <option value="6">Six</option>
+            <option value="7">Seven</option>
+            <option value="8">Eight</option>
+          </select>
           <input
-            className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm"
+            className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
             type="text"
             placeholder="Ваше имя"
           />
           <input
-            className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm"
+            className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
             type="tel"
             placeholder="Номер телефона"
           />
-
-          <textarea
-            className="border-solid border-2 w-full p-2 text-iconHoverBg focus:border-icon border-iconHoverBg focus:outline-none focus:text-black rounded-sm"
-            id="w3review"
-            name="w3review"
-            rows="6"
-            placeholder="Сообщение"
-          ></textarea>
-          <button className="bg-buttonBg w-full py-3 rounded-3xl text-white text-sm font-semibold hover:bg-black ease-in-out duration-100 mb-24 mt-3 hover:scale-90">
+          <button className="bg-buttonBg w-full py-3 rounded-3xl text-white text-sm font-semibold hover:bg-black ease-in-out duration-200 mb-24 mt-3 hover:scale-90">
             Отправить
           </button>
         </div>
