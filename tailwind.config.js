@@ -26,7 +26,7 @@ export default {
         secondaryColor: "#DEDEDE",
         green: "#53B175",
         greenPrimary: "#D6ECDF",
-        red: "#DA002B",
+        red: "#fc5f5f",
         black: "#242424",
         textColor: "#2b2f38",
         pColor: "#5D6167",
