@@ -8,30 +8,30 @@ const Header = () => {
   const nav = [
     {
       title: "Главная",
-      link: "/",
+      href: "/",
     },
     {
       title: "О нас",
-      link: "/",
+      href: "#about",
     },
     {
       title: "Наши курсы",
-      link: "/",
+      href: "#courses",
     },
     {
       title: "Партнеры",
-      link: "/",
+      href: "#partners",
     },
     {
       title: "Команда",
-      link: "/",
+      href: "#team",
     },
     {
       title: "Контакты",
-      link: "/",
+      href: "#contacts",
     },
   ];
-  
+
   return (
     <header className="w-100 relative z-20">
       <div className="container mx-auto w-full h-20 items-center flex justify-between relative">
@@ -45,7 +45,7 @@ const Header = () => {
         <ul className="md:flex gap-8 items-center hidden">
           {nav?.map((item) => (
             <li>
-              <a className="text-[15px] text-textColor" href={item?.link}>
+              <a className="text-[15px] text-textColor" href={item?.href}>
                 {item?.title}
               </a>
             </li>

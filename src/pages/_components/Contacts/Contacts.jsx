@@ -10,7 +10,7 @@ import { FaEnvelopeSquare } from "react-icons/fa";
 
 const Contacts = () => {
   return (
-    <section className="wrapper pt-20 px-12">
+    <section className="wrapper pt-20 px-12" id="contacts">
       <h2 className="text-center text-textColor text-[40px] font-semibold">
         Наши контакты
       </h2>

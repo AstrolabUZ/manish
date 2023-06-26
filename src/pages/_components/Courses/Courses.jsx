@@ -29,7 +29,7 @@ const Courses = () => {
 
   return (
     <>
-      <section className="wrapper py-[100px]">
+      <section className="wrapper py-[100px]" id="courses">
         <h6 className="text-center text-textColor text-[40px] font-semibold">
           Наши курсы
         </h6>

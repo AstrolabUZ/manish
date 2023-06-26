@@ -12,7 +12,7 @@ import img6 from "../../../assets/image/milady.png";
 
 const Partners = () => {
   return (
-    <section className="py-[130px]">
+    <section className="pt-[130px]" id="partners">
       <h6 className="text-center text-textColor text-[40px] font-semibold">
         Наши партнеры
       </h6>

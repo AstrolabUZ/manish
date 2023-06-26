@@ -2,7 +2,7 @@ import React from "react";
 import img from "../../../assets/image/aboutCompImg.jpg";
 const Academy = () => {
   return (
-    <section className="wrapper grid grid-cols-2 py-[100px]">
+    <section className="wrapper grid grid-cols-2 py-[100px]" id="about">
       <div>
         <h4 className="text-[40px] font-semibold text-textColor">
           Об академии

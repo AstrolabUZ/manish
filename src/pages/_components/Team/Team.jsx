@@ -4,7 +4,7 @@ import woman3 from "../../../assets/image/woman3.jpg";
 
 const Team = () => {
   return (
-    <section className="wrapper pt-40 px-12">
+    <section className="wrapper pt-20 px-12" id="team">
       <h2 className="text-center text-textColor text-[40px] font-semibold">
         Наша команда
       </h2>
