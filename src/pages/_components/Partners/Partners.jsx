@@ -25,7 +25,7 @@ const Partners = () => {
           spaceBetween={70}
           slidesPerView={4}
           navigation
-          // centeredSlides={true}
+          centeredSlides={true}
           className={"wrapper h-[200px] mt-5 flex"}
           loop={true}
         >

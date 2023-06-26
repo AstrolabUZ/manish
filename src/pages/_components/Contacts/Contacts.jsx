@@ -7,8 +7,6 @@ import {
   FaTelegram,
 } from "react-icons/fa6";
 import { FaEnvelopeSquare } from "react-icons/fa";
-import { Select, initTE } from "tw-elements";
-initTE({ Select });
 
 const Contacts = () => {
   return (
@@ -119,10 +117,7 @@ const Contacts = () => {
           <p className="text-center text-sm pt-3 pb-8">
             Мы свяжемся с вами в ближайшее время.
           </p>
-          <select
-            data-te-select-init
-            className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black cursor-pointer"
-          >
+          <select className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black cursor-pointer">
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
