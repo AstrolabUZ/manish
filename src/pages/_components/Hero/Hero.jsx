@@ -1,11 +1,6 @@
-import React from 'react'
-import "./index.scss"
+import "./index.scss";
 const Hero = () => {
-  return (
-    <section className='hero-container'>
-      Hero
-    </section>
-  )
-}
+  return <section className="hero-container"></section>;
+};
 
-export default Hero
+export default Hero;
