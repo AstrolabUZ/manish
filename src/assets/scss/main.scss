@@ -15,5 +15,18 @@ body {
     font-size: 15px !important;
     font-weight: 700 !important;
     color: #242424 !important;
-    padding: 20px;
+}
+.swiper-button-prev {
+    left: -7px !important;
+    background-color: #fff !important;
+    height: 100% !important;
+    top: 14px !important;
+    width: 47px !important;
+}
+.swiper-button-next {
+    right: -7px !important;
+    background-color: #fff !important;
+    height: 100% !important;
+    top: 14px !important;
+    width: 47px !important;
 }

@@ -20,14 +20,16 @@ const Partners = () => {
         <Swiper
           modules={[Navigation, Autoplay]}
           autoplay={{
-            delay: 1000,
+            delay: 5000,
           }}
           spaceBetween={70}
           slidesPerView={4}
           navigation
-          centeredSlides={true}
-          className={"wrapper h-[200px] mt-5 flex"}
+          // rewind={true}
           loop={true}
+          loopedSlides={2}
+          centeredSlides={true}
+          className={"wrapper h-[200px] mt-5"}
         >
           <SwiperSlide className="grid place-items-center p-5 select-none">
             <img src={img1} alt="" />
