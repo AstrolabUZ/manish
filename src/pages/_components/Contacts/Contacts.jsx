@@ -168,14 +168,8 @@ const Contacts = () => {
               required
               className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black cursor-pointer"
             >
-              <option value="one">One</option>
-              <option value="two">Two</option>
-              <option value="three">Three</option>
-              <option value="four">Four</option>
-              <option value="five">Five</option>
-              <option value="six">Six</option>
-              <option value="seven">Seven</option>
-              <option value="eight">Eight</option>
+              <option value="Светский этикет">Светский этикет</option>
+              <option value="Юный дипломат">Юный дипломат</option>
             </select>
             <input
               className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
