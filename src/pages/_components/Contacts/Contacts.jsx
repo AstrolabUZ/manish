@@ -5,10 +5,51 @@ import {
   FaInstagram,
   FaYoutube,
   FaTelegram,
+  FaCheck,
 } from "react-icons/fa6";
 import { FaEnvelopeSquare } from "react-icons/fa";
+// import { FiCheck } from "react-icons/fi";
+
+import { useState } from "react";
 
 const Contacts = () => {
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [direction, setDirection] = useState("one");
+  const [success, setSuccess] = useState(false);
+  let tg = {
+    // Test token, chat id
+    token: "6242136083:AAF1sg_MpGg-rV_FtN6wVWo3ulF-kPa72Co",
+    chat_id: "1778083508",
+
+    // Manish token,chat id //
+    // token: "6171916990:AAHIQsOwxdCv-e7s38li0q8ESGSr_32JWCM",
+    // chat_id: ""
+  };
+
+  function sendMessage() {
+    const url = `https://api.telegram.org/bot${tg.token}/sendMessage?chat_id=${
+      tg.chat_id
+    }&text=${`Manish.uz: имя: ${name}, номер: ${number}, направление: ${direction}`}`;
+    const xht = new XMLHttpRequest();
+    xht.onreadystatechange = function () {
+      if (xht.readyState == XMLHttpRequest.DONE) {
+        if (JSON.parse(xht.responseText).ok) {
+          setSuccess(true);
+          setOptionValue("one");
+          setName("");
+          setNumber("");
+        }
+      }
+    };
+    xht.open("GET", url);
+    xht.send();
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    sendMessage();
+  };
   return (
     <section className="wrapper pt-20 px-12" id="contacts">
       <h2 className="text-center text-textColor md:text-[40px] text-2xl font-semibold">
@@ -117,29 +158,62 @@ const Contacts = () => {
           <p className="text-center text-sm pt-3 pb-8">
             Мы свяжемся с вами в ближайшее время.
           </p>
-          <select className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black cursor-pointer">
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            <option value="4">Four</option>
-            <option value="5">Five</option>
-            <option value="6">Six</option>
-            <option value="7">Seven</option>
-            <option value="8">Eight</option>
-          </select>
-          <input
-            className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
-            type="text"
-            placeholder="Ваше имя"
-          />
-          <input
-            className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
-            type="tel"
-            placeholder="Номер телефона"
-          />
-          <button className="bg-buttonBg w-full py-3 rounded-3xl text-white text-sm font-semibold hover:bg-black ease-in-out duration-200 mb-24 mt-3 hover:scale-90">
-            Отправить
-          </button>
+          <form onSubmit={(e) => onSubmit(e)} className="relative">
+            <select
+              onChange={(e) => {
+                setDirection(e.target.value);
+                setSuccess(false);
+              }}
+              value={direction}
+              required
+              className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black cursor-pointer"
+            >
+              <option value="one">One</option>
+              <option value="two">Two</option>
+              <option value="three">Three</option>
+              <option value="four">Four</option>
+              <option value="five">Five</option>
+              <option value="six">Six</option>
+              <option value="seven">Seven</option>
+              <option value="eight">Eight</option>
+            </select>
+            <input
+              className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
+              type="text"
+              placeholder="Ваше имя"
+              required
+              onChange={(e) => {
+                setName(e.target.value);
+                setSuccess(false);
+              }}
+              value={name}
+            />
+            <input
+              className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
+              type="tel"
+              placeholder="Номер телефона"
+              required
+              onChange={(e) => {
+                setNumber(e.target.value);
+                setSuccess(false);
+              }}
+              value={number}
+            />
+            <button
+              type={"submit"}
+              className="bg-buttonBg w-full py-3 rounded-3xl text-white text-sm font-semibold hover:bg-black ease-in-out duration-200 mb-14 mt-3 hover:scale-90"
+            >
+              Отправить
+            </button>
+            {success && (
+              <div className="flex items-center gap-1 absolute bottom-2">
+                <FaCheck color="#53B175" />
+                <p className="text-green font-semibold">
+                  Форма успешно отправлена !
+                </p>
+              </div>
+            )}
+          </form>
         </div>
       </div>
     </section>
