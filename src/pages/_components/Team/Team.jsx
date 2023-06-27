@@ -4,13 +4,13 @@ import woman3 from "../../../assets/image/woman3.jpg";
 
 const Team = () => {
   return (
-    <section className="wrapper pt-20 px-12" id="team">
-      <h2 className="text-center text-textColor text-[40px] font-semibold">
+    <section className="wrapper pt-20 md:px-12" id="team">
+      <h2 className="text-center text-textColor md:text-[40px] text-2xl font-semibold">
         Наша команда
       </h2>
-      <div className="pt-20 flex items-center gap-8">
+      <div className="md:pt-20 pt-4 md:flex lt:grid items-center gap-8">
         <div className="relative">
-          <img src={woman1} className="min-w-[360px] w-full h-[459px] object-cover mix-blend-color-burn" />
+          <img src={woman1} className="md:min-w-[360px] w-full h-[459px] object-cover mix-blend-color-burn" />
           <h4 className="absolute bottom-20 left-9 text-white text-[18px] font-semibold leading-3">
             Малика Кульмухамедова
           </h4>
@@ -19,7 +19,7 @@ const Team = () => {
           </p>
         </div>
         <div className="relative">
-          <img src={woman2} className="min-w-[360px] w-full h-[459px] object-cover mix-blend-color-burn" />
+          <img src={woman2} className="md:min-w-[360px] w-full h-[459px] object-cover mix-blend-color-burn" />
           <h4 className="absolute bottom-20 left-9 text-white text-[18px] font-semibold leading-3">
             Ираида Мухаммед
           </h4>
@@ -28,7 +28,7 @@ const Team = () => {
           </p>
         </div>
         <div className="relative">
-          <img src={woman3} className="min-w-[360px] w-full h-[459px] object-cover mix-blend-color-burn" />
+          <img src={woman3} className="md:min-w-[360px] w-full h-[459px] object-cover mix-blend-color-burn" />
           <h4 className="absolute bottom-20 left-9 text-white text-[18px] font-semibold leading-3">
             Гулбадан Ёсинбекова
           </h4>

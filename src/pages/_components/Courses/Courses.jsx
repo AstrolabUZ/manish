@@ -33,31 +33,44 @@ const Courses = () => {
         <h6 className="text-center text-textColor text-[40px] font-semibold">
           Наши курсы
         </h6>
-        <div className="grid grid-cols-3 gap-14 mt-14">
-          {data.map((item) => (
+        <div className="grid md:grid-cols-3 gap-14 mt-14">
+          {data.map((item, index) => (
             <Card
               img={item?.img}
               title={item?.title}
               subtitle={item?.subtitle}
+              key={index}
             />
           ))}
         </div>
       </section>
-      <section className="wrapper grid grid-cols-[auto_1fr_1fr] mt-10">
-        <div className="px-10">
-          <GiSevenPointedStar color="#fc5f5f" size={40}/>
-          <h6 className="text-lg text-textColor font-semibold pt-5 pb-2">Сертификат</h6>
-          <p className="text-pColor text-[15px]">По окончании курса выдаётся сертификат</p>
+      <section className="wrapper grid gap-10 md:gap-0 md:grid-cols-[auto_1fr_1fr] md:mt-10">
+        <div className="md:px-10">
+          <GiSevenPointedStar color="#fc5f5f" size={40} />
+          <h6 className="md:text-lg text-base text-textColor font-semibold pt-5 pb-2">
+            Сертификат
+          </h6>
+          <p className="text-pColor md:text-[15px] text-[13.5px]">
+            По окончании курса выдаётся сертификат
+          </p>
         </div>
-        <div className="px-20 ">
-          <FaChild color="#fc5f5f" size={40}/>
-          <h6 className="text-lg text-textColor font-semibold pt-5 pb-2">Для детей</h6>
-          <p className="text-pColor text-[15px]">Есть курсы для детей</p>
+        <div className="md:px-20 ">
+          <FaChild color="#fc5f5f" size={40} />
+          <h6 className="md:text-lg text-base text-textColor font-semibold pt-5 pb-2">
+            Для детей
+          </h6>
+          <p className="text-pColor md:text-[15px] text-[13.5px]">
+            Есть курсы для детей
+          </p>
         </div>
-        <div className="px-20">
-          <FaPercent color="#fc5f5f" size={40}/>
-          <h6 className="text-lg text-textColor font-semibold pt-5 pb-2">Много скидок</h6>
-          <p className="text-pColor text-[15px]">Различные скидки на курсы</p>
+        <div className="md:px-20">
+          <FaPercent color="#fc5f5f" size={40} />
+          <h6 className="md:text-lg text-base text-textColor font-semibold pt-5 pb-2">
+            Много скидок
+          </h6>
+          <p className="text-pColor md:text-[15px] text-[13.5px]">
+            Различные скидки на курсы
+          </p>
         </div>
       </section>
     </>

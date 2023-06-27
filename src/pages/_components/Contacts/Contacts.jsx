@@ -11,14 +11,14 @@ import { FaEnvelopeSquare } from "react-icons/fa";
 const Contacts = () => {
   return (
     <section className="wrapper pt-20 px-12" id="contacts">
-      <h2 className="text-center text-textColor text-[40px] font-semibold">
+      <h2 className="text-center text-textColor md:text-[40px] text-2xl font-semibold">
         Наши контакты
       </h2>
       <p className="text-pColor text-[22px] pt-5 text-center">
         Если вы заинтересованы в наших курсах, пожалуйста, оставьте свой номер
         телефона или свои данные, и мы свяжемся с вами в ближайшее время
       </p>
-      <div className="flex gap-32 pt-28 pb-24 px-12">
+      <div className="md:flex lt:grid md:gap-32 gap-10 pt-28 pb-24 md:px-12">
         <div className="w-full">
           <div className="flex gap-2 pb-7 items-center">
             <p className="text-pColor font-bold text-[15px]">Связаться</p>
@@ -61,8 +61,8 @@ const Contacts = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-          <div className="flex gap-2 pt-10 pb-5 items-center">
-            <p className="text-pColor font-bold text-[15px] w-96">
+          <div className="grid grid-cols-[auto_1fr] gap-2 pt-10 pb-5 items-center">
+            <p className="text-pColor font-bold text-[15px]">
               Подписывайтесь на нас
             </p>
             <hr className="w-full" />
@@ -110,7 +110,7 @@ const Contacts = () => {
             </a>
           </div>
         </div>
-        <div className="w-9/12 shadow-2xl px-10">
+        <div className="md:w-9/12 w-full shadow-2xl px-10 h-full">
           <h2 className="text-center w-full  text-textColor text-[32px] font-semibold pt-12">
             Отправьте нам сообщение
           </h2>
