@@ -5,25 +5,23 @@ import img3 from "../../../assets/image/card-img3.png";
 
 import { GiSevenPointedStar } from "react-icons/gi";
 import { FaChild, FaPercent } from "react-icons/fa";
+import { Language } from "../../../services/language";
 const Courses = () => {
   const data = [
     {
       img: img1,
-      title: "Курс «Светский этикет для леди»",
-      subtitle:
-        "Это всесторонний подход к формированию цельного гармоничного образа женщины.",
+      title: Language("COURSETITLE1"),
+      subtitle: Language("COURSEDESC1"),
     },
     {
       img: img2,
-      title: "Курс «Юный Дипломат»",
-      subtitle:
-        "На наших уроках дети будут учиться правилам поведения и хорошим манерам в обществе и за столом, сервировке стола и правильному употребления блюд, речевому этикету и ораторскому мастерству.",
+      title: Language("COURSETITLE2"),
+      subtitle: Language("COURSEDESC2"),
     },
     {
       img: img3,
-      title: "Курс «Король говорит!»",
-      subtitle:
-        "Никакая другая способность человека не даст ему возможности с такой быстротой сделать карьеру и добиться признания, как способность хорошо говорить.",
+      title: Language("COURSETITLE3"),
+      subtitle: Language("COURSEDESC3"),
     },
   ];
 
@@ -31,7 +29,7 @@ const Courses = () => {
     <>
       <section className="wrapper py-[100px]" id="courses">
         <h6 className="text-center text-textColor text-[40px] font-semibold">
-          Наши курсы
+          {Language("COURSE")}
         </h6>
         <div className="grid md:grid-cols-3 gap-14 mt-14">
           {data.map((item, index) => (
@@ -48,28 +46,28 @@ const Courses = () => {
         <div className="md:px-10">
           <GiSevenPointedStar color="#fc5f5f" size={40} />
           <h6 className="md:text-lg text-base text-textColor font-semibold pt-5 pb-2">
-            Сертификат
+          {Language("SERVICETITLE1")}
           </h6>
           <p className="text-pColor md:text-[15px] text-[13.5px]">
-            По окончании курса выдаётся сертификат
+          {Language("SERVICEDESC1")}
           </p>
         </div>
         <div className="md:px-20 ">
           <FaChild color="#fc5f5f" size={40} />
           <h6 className="md:text-lg text-base text-textColor font-semibold pt-5 pb-2">
-            Для детей
+          {Language("SERVICETITLE2")}
           </h6>
           <p className="text-pColor md:text-[15px] text-[13.5px]">
-            Есть курсы для детей
+          {Language("SERVICEDESC2")}
           </p>
         </div>
         <div className="md:px-20">
           <FaPercent color="#fc5f5f" size={40} />
           <h6 className="md:text-lg text-base text-textColor font-semibold pt-5 pb-2">
-            Много скидок
+          {Language("SERVICETITLE3")}
           </h6>
           <p className="text-pColor md:text-[15px] text-[13.5px]">
-            Различные скидки на курсы
+          {Language("SERVICEDESC3")}
           </p>
         </div>
       </section>

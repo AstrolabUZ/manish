@@ -9,12 +9,12 @@ import img3 from "../../../assets/image/wp.png";
 import img4 from "../../../assets/image/begin.png";
 import img5 from "../../../assets/image/positano.png";
 import img6 from "../../../assets/image/milady.png";
-
+import { Language } from "../../../services/language";
 const Partners = () => {
   return (
     <section className="pt-[130px]" id="partners">
       <h6 className="text-center text-textColor md:text-[40px] text-2xl font-semibold">
-        Наши партнеры
+      {Language("PARTNER_TITLE")}
       </h6>
       <div>
         <Swiper

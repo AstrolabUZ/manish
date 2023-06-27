@@ -7,6 +7,8 @@ import {
   FaTelegram,
   FaCheck,
 } from "react-icons/fa6";
+import { Language } from "../../../services/language";
+
 import { FaEnvelopeSquare } from "react-icons/fa";
 // import { FiCheck } from "react-icons/fi";
 
@@ -53,16 +55,17 @@ const Contacts = () => {
   return (
     <section className="wrapper pt-20 px-12" id="contacts">
       <h2 className="text-center text-textColor md:text-[40px] text-2xl font-semibold">
-        Наши контакты
+        {Language("CONTACT_TITLE")}
       </h2>
       <p className="text-pColor text-[22px] pt-5 text-center">
-        Если вы заинтересованы в наших курсах, пожалуйста, оставьте свой номер
-        телефона или свои данные, и мы свяжемся с вами в ближайшее время
+        {Language("CONTACT_DESC")}
       </p>
       <div className="md:flex lt:grid md:gap-32 gap-10 pt-28 pb-24 md:px-12">
         <div className="w-full">
           <div className="flex gap-2 pb-7 items-center">
-            <p className="text-pColor font-bold text-[15px]">Связаться</p>
+            <p className="text-pColor font-bold text-[15px]">
+              {Language("CONTACT_LEFT1")}
+            </p>
             <hr className="w-full" />
           </div>
           <ul className="px-5">
@@ -92,7 +95,9 @@ const Contacts = () => {
             </li>
           </ul>
           <div className="flex gap-2 pb-7 pt-14 items-center">
-            <p className="text-pColor font-bold text-[15px] w-20">Мы тут</p>
+            <p className="text-pColor font-bold text-[15px] w-20">
+              {Language("CONTACT_LEFT2")}
+            </p>
             <hr className="w-full" />
           </div>
           <iframe
@@ -104,7 +109,7 @@ const Contacts = () => {
           ></iframe>
           <div className="grid grid-cols-[auto_1fr] gap-2 pt-10 pb-5 items-center">
             <p className="text-pColor font-bold text-[15px]">
-              Подписывайтесь на нас
+              {Language("CONTACT_LEFT3")}
             </p>
             <hr className="w-full" />
           </div>
@@ -153,10 +158,10 @@ const Contacts = () => {
         </div>
         <div className="md:w-9/12 w-full shadow-2xl px-10 h-full">
           <h2 className="text-center w-full  text-textColor text-[32px] font-semibold pt-12">
-            Отправьте нам сообщение
+            {Language("CONTACT_RIGHT_TITLE")}
           </h2>
           <p className="text-center text-sm pt-3 pb-8">
-            Мы свяжемся с вами в ближайшее время.
+            {Language("CONTACT_RIGHT_DESC")}
           </p>
           <form onSubmit={(e) => onSubmit(e)} className="relative">
             <select
@@ -168,13 +173,17 @@ const Contacts = () => {
               required
               className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black cursor-pointer"
             >
-              <option value="Светский этикет">Светский этикет</option>
-              <option value="Юный дипломат">Юный дипломат</option>
+              <option value="Светский этикет">
+                {Language("CONTACT_RIGHT_SELECT1")}
+              </option>
+              <option value="Юный дипломат">
+                {Language("CONTACT_RIGHT_SELECT2")}
+              </option>
             </select>
             <input
               className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
               type="text"
-              placeholder="Ваше имя"
+              placeholder={Language("CONTACT_RIGHT_INPUT1")}
               required
               onChange={(e) => {
                 setName(e.target.value);
@@ -185,7 +194,7 @@ const Contacts = () => {
             <input
               className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
               type="tel"
-              placeholder="Номер телефона"
+              placeholder={Language("CONTACT_RIGHT_INPUT2")}
               required
               onChange={(e) => {
                 setNumber(e.target.value);
@@ -197,13 +206,13 @@ const Contacts = () => {
               type={"submit"}
               className="bg-buttonBg w-full py-3 rounded-3xl text-white text-sm font-semibold hover:bg-black ease-in-out duration-200 mb-14 mt-3 hover:scale-90"
             >
-              Отправить
+              {Language("CONTACT_RIGHT_BUTTON")}
             </button>
             {success && (
               <div className="flex items-center gap-1 absolute bottom-2">
                 <FaCheck color="#53B175" />
                 <p className="text-green font-semibold">
-                  Форма успешно отправлена !
+                  {Language("CONTACT_RIGHT_SUCCESS")}
                 </p>
               </div>
             )}

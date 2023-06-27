@@ -17,19 +17,19 @@ const Header = () => {
       href: "#about",
     },
     {
-      title: "Наши курсы",
+      title: Language("COURSE"),
       href: "#courses",
     },
     {
-      title: "Партнеры",
+      title: Language("PARTNERS"),
       href: "#partners",
     },
     {
-      title: "Команда",
+      title: Language("CLUB"),
       href: "#team",
     },
     {
-      title: "Контакты",
+      title: Language("CONTACT"),
       href: "#contacts",
     },
   ];

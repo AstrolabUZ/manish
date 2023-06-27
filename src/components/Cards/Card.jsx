@@ -1,3 +1,4 @@
+import { Language } from "../../services/language";
 const Card = ({ img, subtitle, title }) => {
   return (
     <div className="rounded-2xl overflow-hidden hover:shadow-2xl shadow-textColor duration-700">
@@ -11,7 +12,7 @@ const Card = ({ img, subtitle, title }) => {
           href="#"
           className="md:text-xs text-[10px] text-red font-semibold tracking-[2px] hover:text-textColor duration-700 mt-5"
         >
-          УЗНАТЬ БОЛЬШЕ
+           {Language("COURSELINK")}
         </a>
       </div>
     </div>
