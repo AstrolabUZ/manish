@@ -42,5 +42,6 @@
   "CONTACT_RIGHT_INPUT1": "Ваше имя",
   "CONTACT_RIGHT_INPUT2": "Номер телефона",
   "CONTACT_RIGHT_BUTTON": "Отправить",
-  "CONTACT_RIGHT_SUCCESS": "Форма успешно отправлена !"
+  "CONTACT_RIGHT_SUCCESS": "Форма успешно отправлена !",
+  "CONTACT_MESSAGE": "Отправьте нам сообщение, и мы свяжемся с вами в ближайшее время."
 }

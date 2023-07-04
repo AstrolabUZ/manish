@@ -17,16 +17,16 @@ import { useState } from "react";
 const Contacts = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  const [direction, setDirection] = useState("one");
+  const [direction, setDirection] = useState("Светский этикет");
   const [success, setSuccess] = useState(false);
   let tg = {
     // Test token, chat id
-    token: "6242136083:AAF1sg_MpGg-rV_FtN6wVWo3ulF-kPa72Co",
-    chat_id: "1778083508",
+    // token: "6242136083:AAF1sg_MpGg-rV_FtN6wVWo3ulF-kPa72Co",
+    // chat_id: "1778083508",
 
     // Manish token,chat id //
-    // token: "6171916990:AAHIQsOwxdCv-e7s38li0q8ESGSr_32JWCM",
-    // chat_id: ""
+    token: "6171916990:AAHIQsOwxdCv-e7s38li0q8ESGSr_32JWCM",
+    chat_id: "-1001877123001",
   };
 
   function sendMessage() {
@@ -37,10 +37,9 @@ const Contacts = () => {
     xht.onreadystatechange = function () {
       if (xht.readyState == XMLHttpRequest.DONE) {
         if (JSON.parse(xht.responseText).ok) {
+          sessionStorage.setItem("message", true);
           setSuccess(true);
-          setOptionValue("one");
-          setName("");
-          setNumber("");
+          window.location.reload();
         }
       }
     };

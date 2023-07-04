@@ -42,5 +42,6 @@
   "CONTACT_RIGHT_INPUT1": "Ismingiz",
   "CONTACT_RIGHT_INPUT2": "Telefon raqamingiz",
   "CONTACT_RIGHT_BUTTON": "Yuborish",
-  "CONTACT_RIGHT_SUCCESS": "Muvaffaqiyatli yuborildi"
+  "CONTACT_RIGHT_SUCCESS": "Muvaffaqiyatli yuborildi",
+  "CONTACT_MESSAGE": "Bizga xabar yuboring va biz imkon qadar tezroq siz bilan bog'lanamiz."
 }
