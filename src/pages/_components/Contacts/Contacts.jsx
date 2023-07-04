@@ -8,7 +8,7 @@ import {
   FaCheck,
 } from "react-icons/fa6";
 import { Language } from "../../../services/language";
-
+import InputMask from "react-input-mask";
 import { FaEnvelopeSquare } from "react-icons/fa";
 // import { FiCheck } from "react-icons/fi";
 
@@ -62,7 +62,7 @@ const Contacts = () => {
       </p>
       <div className="md:flex lt:grid md:gap-32 gap-10 pt-28 pb-24 md:px-12">
         <div className="w-full">
-          <div className="flex gap-2 pb-7 items-center">
+          <div className="grid grid-cols-[auto_1fr] gap-2 pb-7 items-center">
             <p className="text-pColor font-bold text-[15px]">
               {Language("CONTACT_LEFT1")}
             </p>
@@ -94,8 +94,8 @@ const Contacts = () => {
               </a>
             </li>
           </ul>
-          <div className="flex gap-2 pb-7 pt-14 items-center">
-            <p className="text-pColor font-bold text-[15px] w-20">
+          <div className="grid grid-cols-[auto_1fr] gap-2 pb-7 pt-14 items-center">
+            <p className="text-pColor font-bold text-[15px]">
               {Language("CONTACT_LEFT2")}
             </p>
             <hr className="w-full" />
@@ -191,17 +191,19 @@ const Contacts = () => {
               }}
               value={name}
             />
-            <input
-              className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
-              type="tel"
-              placeholder={Language("CONTACT_RIGHT_INPUT2")}
-              required
+            <InputMask
+              mask="+\9\9\8\ (99) 999-99-99"
+              maskChar=" "
               onChange={(e) => {
                 setNumber(e.target.value);
                 setSuccess(false);
               }}
               value={number}
+              required={true}
+              placeholder={Language("CONTACT_RIGHT_INPUT2")}
+              className="w-full border-solid border-2 border-iconHoverBg p-2 mb-5 focus:outline-none rounded-sm focus:border-black"
             />
+
             <button
               type={"submit"}
               className="bg-buttonBg w-full py-3 rounded-3xl text-white text-sm font-semibold hover:bg-black ease-in-out duration-200 mb-14 mt-3 hover:scale-90"
