@@ -10,7 +10,7 @@ const Team = () => {
       </h2>
       <div className="md:pt-20 pt-4 md:flex lt:grid items-center gap-8">
         <div className="relative">
-          <img src={woman1} className="md:min-w-[360px] w-full h-[459px] object-cover mix-blend-color-burn" />
+          <img src={woman1} className="md:min-w-[360px] w-full h-[459px] object-cover " />
           <h4 className="absolute bottom-20 left-9 text-white text-[18px] font-semibold leading-3">
           {Language("PERSON1NAME")}
           </h4>
@@ -19,7 +19,7 @@ const Team = () => {
           </p>
         </div>
         <div className="relative">
-          <img src={woman2} className="md:min-w-[360px] w-full h-[459px] object-cover mix-blend-color-burn" />
+          <img src={woman2} className="md:min-w-[360px] w-full h-[459px] object-cover" />
           <h4 className="absolute bottom-20 left-9 text-white text-[18px] font-semibold leading-3">
           {Language("PERSON2NAME")}
           </h4>
@@ -28,7 +28,7 @@ const Team = () => {
           </p>
         </div>
         <div className="relative">
-          <img src={woman3} className="md:min-w-[360px] w-full h-[459px] object-cover mix-blend-color-burn" />
+          <img src={woman3} className="md:min-w-[360px] w-full h-[459px] object-cover" />
           <h4 className="absolute bottom-20 left-9 text-white text-[18px] font-semibold leading-3">
           {Language("PERSON3NAME")}
           </h4>
