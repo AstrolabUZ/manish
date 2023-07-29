@@ -21,6 +21,7 @@ const ContactsComponent = ({setMessage,theMessage}) => {
       if (xht.readyState == XMLHttpRequest.DONE) {
         if (JSON.parse(xht.responseText).ok) {
           sessionStorage.setItem("message", true);
+          swal(Language('CONTACT_RIGHT_SUCCESS'), Language('CONTACT_RIGHT_DESC'), "success");
           setMessage(true)
         }
       }

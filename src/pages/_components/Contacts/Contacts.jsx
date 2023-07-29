@@ -42,6 +42,8 @@ const Contacts = ({setMessage}) => {
           setSuccess(true);
           swal(Language('CONTACT_RIGHT_SUCCESS'), Language('CONTACT_RIGHT_DESC'), "success");
           setMessage(true)
+          setName('')
+          setNumber('')
         }
       }
     };

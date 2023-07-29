@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Language } from "../../services/language";
 import InputMask from "react-input-mask";
 import { useEffect } from "react";
+import swal from "sweetalert";
 const ContactsResponsive = ({setMessage}) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -23,7 +24,7 @@ const ContactsResponsive = ({setMessage}) => {
         if (JSON.parse(xht.responseText).ok) {
           sessionStorage.setItem("message", true);
           setMessage(true)
-          
+          swal(Language('CONTACT_RIGHT_SUCCESS'), Language('CONTACT_RIGHT_DESC'), "success");
         }
       }
     };
