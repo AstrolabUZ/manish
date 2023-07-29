@@ -13,8 +13,9 @@ import { FaEnvelopeSquare } from "react-icons/fa";
 // import { FiCheck } from "react-icons/fi";
 
 import { useState } from "react";
+import swal from "sweetalert";
 
-const Contacts = () => {
+const Contacts = ({setMessage}) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [direction, setDirection] = useState("Светский этикет");
@@ -39,7 +40,10 @@ const Contacts = () => {
         if (JSON.parse(xht.responseText).ok) {
           sessionStorage.setItem("message", true);
           setSuccess(true);
-          window.location.reload();
+          swal(Language('CONTACT_RIGHT_SUCCESS'), Language('CONTACT_RIGHT_DESC'), "success");
+          setMessage(true)
+          setName('')
+          setNumber('')
         }
       }
     };
@@ -51,6 +55,7 @@ const Contacts = () => {
     e.preventDefault();
     sendMessage();
   };
+  
   return (
     <section className="wrapper pt-20 px-12" id="contacts">
       <h2 className="text-center text-textColor md:text-[40px] text-2xl font-semibold">

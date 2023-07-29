@@ -6,7 +6,7 @@ import Hero from "./_components/Hero/Hero";
 import Partners from "./_components/Partners/Partners";
 import Team from "./_components/Team/Team";
 
-const Home = () => {
+const Home = ({setMessage}) => {
   return (
     <>
       <Hero />
@@ -14,7 +14,7 @@ const Home = () => {
       <Courses />
       <Partners />
       <Team />
-      <Contacts />
+      <Contacts setMessage={setMessage}/>
     </>
   );
 };
