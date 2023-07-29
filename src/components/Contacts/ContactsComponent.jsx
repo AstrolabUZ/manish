@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Language } from "../../services/language";
 import InputMask from "react-input-mask";
-const ContactsComponent = () => {
+import swal from 'sweetalert'
+const ContactsComponent = ({setMessage,theMessage}) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [direction, setDirection] = useState("Светский этикет");
@@ -20,14 +21,14 @@ const ContactsComponent = () => {
       if (xht.readyState == XMLHttpRequest.DONE) {
         if (JSON.parse(xht.responseText).ok) {
           sessionStorage.setItem("message", true);
-          window.location.reload();
+          setMessage(true)
         }
       }
     };
     xht.open("GET", url);
     xht.send();
   }
-
+  
   const onSubmit = (e) => {
     e.preventDefault();
     sendMessage();
@@ -35,16 +36,21 @@ const ContactsComponent = () => {
 
   window.onscroll = function () {
     if (window.screen.width > 500) {
-      myFunction();
+      if(!theMessage){
+        myFunction();
+      }
+      if(theMessage){
+        setScroll(false)
+      }
     }
   };
 
   function myFunction() {
-    if (document.documentElement.scrollTop > 3500) {
-      setScroll(true);
-    } else {
-      setScroll(false);
-    }
+      if (document.documentElement.scrollTop > 3500) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
   }
 
   return (
