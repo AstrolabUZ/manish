@@ -15,7 +15,7 @@ import { FaEnvelopeSquare } from "react-icons/fa";
 import { useState } from "react";
 import swal from "sweetalert";
 
-const Contacts = ({setMessage}) => {
+const Contacts = ({ setMessage }) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [direction, setDirection] = useState("Светский этикет");
@@ -40,10 +40,14 @@ const Contacts = ({setMessage}) => {
         if (JSON.parse(xht.responseText).ok) {
           sessionStorage.setItem("message", true);
           setSuccess(true);
-          swal(Language('CONTACT_RIGHT_SUCCESS'), Language('CONTACT_RIGHT_DESC'), "success");
-          setMessage(true)
-          setName('')
-          setNumber('')
+          swal(
+            Language("CONTACT_RIGHT_SUCCESS"),
+            Language("CONTACT_RIGHT_DESC"),
+            "success"
+          );
+          setMessage(true);
+          setName("");
+          setNumber("");
         }
       }
     };
@@ -55,7 +59,7 @@ const Contacts = ({setMessage}) => {
     e.preventDefault();
     sendMessage();
   };
-  
+
   return (
     <section className="wrapper pt-20 px-12" id="contacts">
       <h2 className="text-center text-textColor md:text-[40px] text-2xl font-semibold">
@@ -85,7 +89,7 @@ const Contacts = ({setMessage}) => {
             <li className="list-disc text-pColor flex gap-3 pb-5">
               <FaSquarePhone />
               <a className="text-[14px]" href="tel:+998 93 395 23 32">
-                +998 93 395 23 32
+                +998 94 420 88 82
               </a>
             </li>
             <li className="list-disc text-pColor flex gap-3 pb-5">
